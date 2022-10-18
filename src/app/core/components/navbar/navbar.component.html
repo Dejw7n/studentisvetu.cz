@@ -1,4 +1,15 @@
-<div class="flex">
-	<span class="text-primary font-bold">STUDENTI</span>
-	<span class="">SVĚTU</span>
+<div class="flex my-6">
+	<div class="text-2xl font-bold self-center">
+		<span class="text-primary">STUDENTI</span>
+		<span class=""> SVĚTU</span>
+	</div>
+	<div class="hidden grid-flow-col gap-12 ml-20 xl:grid">
+		<div *ngFor="let link of navbarLinks" class="self-center">
+			<span class="text-lg text-neutral-700">{{ link.name }}</span>
+		</div>
+	</div>
+	<div class="hidden grid-flow-col gap-3 ml-auto sm:grid">
+		<div class="btn btn-empty-black rounded-full">Objednat online</div>
+		<div class="btn btn-primary rounded-full">+420 123 456 789</div>
+	</div>
 </div>
