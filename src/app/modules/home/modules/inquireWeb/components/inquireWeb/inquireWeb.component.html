@@ -1,0 +1,36 @@
+<div class="flex gap-14">
+	<div class="w-fit p-8 rounded-2xl bg-sky-100">
+		<div class="text-2xl font-bold self-center">
+			<span class="text-primary">STUDENTI</span>
+			<span class=""> SVĚTU</span>
+		</div>
+		<div class="prose-lg 2xl:prose-xl">
+			<div class="mt-12">
+				<h2 class="!m-0 font-bold leading-none">Nejprve web zdarma a <span class="font-medium">nezávazně vytvoříme.</span></h2>
+			</div>
+			<div class="mt-6">
+				<p class="!m-0">A vy se pak rozhodnete, zda si ho objednáte.</p>
+			</div>
+		</div>
+		<div class="mt-44">
+			<object type="image/svg+xml" data="assets/svg/browser-frame.svg" class="w-full"></object>
+		</div>
+	</div>
+	<div class="w-full">
+		<div class="grid grid-cols-3 py-5">
+			<div *ngFor="let step of steps; let i = index" class="flex gap-3">
+				<div [class]="stepNow == i ? 'bg-black' : 'bg-zinc-500'" class="grid w-8 h-8 rounded-full">
+					<div class="m-auto">
+						<span *ngIf="stepNow <= i" class="text-xl text-white font-semibold">{{ i + 1 }}</span>
+						<div *ngIf="stepNow > i" class="text-lg text-white">
+							<i class="fa-solid fa-check"></i>
+						</div>
+					</div>
+				</div>
+				<span [class]="step.active ? 'text-black' : 'text-zinc-500'" class="self-center font-bold">{{ step.name }}</span>
+			</div>
+		</div>
+		<home-inquireWeb-packages *ngIf="stepNow == 0"></home-inquireWeb-packages>
+		<home-inquireWeb-details *ngIf="stepNow == 1"></home-inquireWeb-details>
+	</div>
+</div>
