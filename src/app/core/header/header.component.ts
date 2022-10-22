@@ -1,12 +1,12 @@
 import { Component, OnInit } from "@angular/core";
 
 @Component({
-	selector: "app-navbar",
-	templateUrl: "./navbar.component.html",
-	styleUrls: ["./navbar.component.scss"],
+	selector: "app-header",
+	templateUrl: "./header.component.html",
+	styleUrls: ["./header.component.scss"],
 })
-export class NavbarComponent implements OnInit {
-	navbarLinks: any = [
+export class HeaderComponent implements OnInit {
+	navLinks: any = [
 		{
 			name: "O nás",
 		},

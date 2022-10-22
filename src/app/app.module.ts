@@ -1,4 +1,4 @@
-import { TrafficModule } from "./traffic/traffic.module";
+import { HomeModule } from "./modules/home/home.module";
 import { CoreModule } from "./core/core.module";
 import { NgModule } from "@angular/core";
 import { BrowserModule } from "@angular/platform-browser";
@@ -8,7 +8,7 @@ import { AppComponent } from "./app.component";
 
 @NgModule({
 	declarations: [AppComponent],
-	imports: [CoreModule, TrafficModule, BrowserModule, AppRoutingModule],
+	imports: [CoreModule, HomeModule, BrowserModule, AppRoutingModule],
 	providers: [],
 	bootstrap: [AppComponent],
 })
