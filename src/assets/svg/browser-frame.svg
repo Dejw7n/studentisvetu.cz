@@ -1,0 +1,24 @@
+<svg width="479" height="303" viewBox="0 0 479 303" fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink">
+  <g clip-path="url(#clip0_83_75)">
+    <mask id="path-2-inside-1_83_75" fill="white">
+      <path d="M0 12.0324H479V302.939H0V12.0324Z"/>
+    </mask>
+    <path d="M0 12.0324H479V302.939H0V12.0324Z" fill="url(#pattern0)"/>
+    <path d="M479 302.939V305.939H482V302.939H479ZM0 302.939H-3V305.939H0V302.939ZM476 12.0324V302.939H482V12.0324H476ZM479 299.939H0V305.939H479V299.939ZM3 302.939V12.0324H-3V302.939H3Z" fill="#E8E8E8" mask="url(#path-2-inside-1_83_75)"/>
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M19.7779 3.02998C15.9962 5.33449 19.1181 10.9683 23.0507 8.93551C25.5331 7.65216 25.3235 4.21635 22.6771 2.84801C21.5718 2.27697 20.9491 2.31528 19.7779 3.02998Z" fill="#F9B73C"/>
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M31.4931 3.60102C30.1794 4.91429 29.977 6.042 30.7758 7.58632C32.3852 10.6965 37.289 9.50774 37.289 6.00728C37.289 2.69957 33.8318 1.26299 31.4931 3.60102Z" fill="#2EB941"/>
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M7.20416 2.89949C4.99597 4.09664 4.93609 7.47978 7.09878 8.896C8.64834 9.91118 11.1092 9.25036 11.9702 7.58632C13.588 4.45818 10.2973 1.22109 7.20416 2.89949Z" fill="#F44B4B"/>
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M0 12.1235H479V0H0V12.1235ZM10.3967 2.77499C13.7736 4.58268 12.6097 9.39521 8.79564 9.39521C7.05567 9.39521 5.45701 7.72639 5.45701 5.91032C5.45701 3.43342 8.27952 1.64249 10.3967 2.77499ZM23.0507 2.88393C26.1606 4.49289 24.9715 9.39521 21.4712 9.39521C19.9551 9.39521 18.9923 8.83495 18.3397 7.57315C16.7339 4.46775 19.9396 1.27616 23.0507 2.88393ZM35.4664 2.87794C36.7285 3.52919 37.289 4.49289 37.289 6.00728C37.289 9.50774 32.3852 10.6965 30.7758 7.58632C29.2202 4.57789 32.4618 1.32404 35.4664 2.87794Z" fill="#2C2C2C"/>
+  </g>
+  <defs>
+    <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+      <use xlink:href="#image0_83_75" transform="translate(0 -0.323288) scale(0.015625 0.0257277)"/>
+    </pattern>
+    <clipPath id="clip0_83_75">
+      <rect width="479" height="303" rx="2" fill="white"/>
+    </clipPath>
+    <image id="image0_83_75" width="64" height="64" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+ip1sAAAAASUVORK5CYII="/>
+  </defs>
+</svg>
