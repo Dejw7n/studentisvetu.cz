@@ -1,6 +1,8 @@
 /** @type {import('tailwindcss').Config} */
 
 const plugin = require("tailwindcss/plugin");
+const colors = require("tailwindcss/colors");
+
 const customColors = {
 	primary: "#0290fe",
 	primary_dark: "#2779bd",
@@ -65,6 +67,7 @@ module.exports = {
 				},
 			});
 		}),
+		require("@tailwindcss/forms"),
 		require("@tailwindcss/typography"),
 	],
 };

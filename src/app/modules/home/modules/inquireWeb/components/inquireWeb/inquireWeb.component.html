@@ -1,0 +1,23 @@
+<div id="inquireWebsite" class="block gap-14 lg:flex">
+	<div class="w-fit p-8 rounded-2xl bg-sky-100">
+		<div class="text-2xl font-bold self-center">
+			<span class="text-primary">STUDENTI</span>
+			<span class=""> SVĚTU</span>
+		</div>
+		<div class="prose-lg 2xl:prose-xl">
+			<div class="mt-12">
+				<h2 class="!m-0 font-bold leading-none">Nejprve web zdarma a <span class="font-medium">nezávazně vytvoříme.</span></h2>
+			</div>
+			<div class="mt-6">
+				<p class="!m-0">A vy se pak rozhodnete, zda si ho objednáte.</p>
+			</div>
+		</div>
+		<div class="hidden mt-44 lg:block">
+			<object type="image/svg+xml" data="assets/svg/browser-frame.svg" class="w-full"></object>
+		</div>
+	</div>
+	<div class="w-full">
+		<home-inquireWeb-form *ngIf="stepNow == 0" (action)="stepAction($event)"></home-inquireWeb-form>
+		<home-inquireWeb-sent *ngIf="stepNow == 1" (action)="stepAction($event)"></home-inquireWeb-sent>
+	</div>
+</div>

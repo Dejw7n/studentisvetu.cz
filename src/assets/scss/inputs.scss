@@ -1,0 +1,69 @@
+.input-floating {
+	@apply relative;
+	@apply z-0;
+	@apply mb-6;
+	@apply w-full;
+
+	input {
+		@apply block;
+		@apply py-2.5;
+		@apply px-0;
+		@apply w-full;
+		@apply text-sm;
+		@apply text-gray-900;
+		@apply bg-transparent;
+		@apply border-0;
+		@apply border-b-2;
+		@apply border-gray-300;
+		@apply appearance-none;
+		@apply focus:outline-none;
+		@apply focus:ring-0;
+		@apply focus:border-blue-600;
+	}
+	label {
+		@apply absolute;
+		@apply text-sm;
+		@apply text-gray-500;
+		@apply duration-300;
+		@apply transform;
+		@apply -translate-y-6;
+		@apply scale-75;
+		@apply top-3;
+		@apply -z-10;
+		@apply origin-[0];
+	}
+	input:placeholder-shown ~ label {
+		@apply scale-100;
+		@apply translate-y-0;
+	}
+	input:focus ~ label {
+		@apply font-medium;
+		@apply left-0;
+		@apply text-blue-600;
+		@apply scale-75;
+		@apply -translate-y-6;
+	}
+}
+
+.input {
+	label {
+		@apply block;
+		@apply mb-2;
+		@apply text-sm;
+		@apply font-medium;
+		@apply text-gray-900;
+	}
+	textarea {
+		@apply block;
+		@apply p-2.5;
+		@apply w-full;
+		@apply text-sm;
+		@apply text-gray-900;
+		@apply bg-white;
+		@apply rounded-lg;
+		@apply border;
+		@apply border-gray-300;
+		@apply focus:ring-blue-500;
+		@apply focus:border-blue-500;
+	}
+}

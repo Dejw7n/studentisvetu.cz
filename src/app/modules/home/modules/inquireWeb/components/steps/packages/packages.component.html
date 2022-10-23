@@ -1,0 +1,42 @@
+<div class="mt-8">
+	<div class="prose">
+		<h2 class="!m-0">Nezávazně Vám vytvoříme web</h2>
+		<p class="!m-0">Do 24h se Vám ozveme s hotovým návrhem na e-mail.</p>
+	</div>
+</div>
+<div class="grid gap-12 mt-8 md:flex">
+	<div *ngFor="let package of packages" class="grid w-full max-w-[375px] p-8 rounded-2xl shadow-xl bg-sky-50">
+		<div>
+			<div class="flex gap-4">
+				<div class="w-8 h-8 rounded-sm bg-sky-500"></div>
+				<span class="text-xl font-bold">{{ package.name }}</span>
+			</div>
+			<div class="mt-5">
+				<span class="text-3xl font-bold">{{ package.price }},- Kč</span>
+				<span class="text-zinc-600 font-semibold"> / navždy</span>
+			</div>
+			<div class="grid gap-1 mt-10">
+				<div *ngFor="let contain of package.contains" class="flex gap-4">
+					<div class="flex w-5 h-5 rounded-md bg-black">
+						<i class="fa-solid fa-check m-auto text-white"></i>
+					</div>
+					<div class="flex">
+						<span class="my-auto font-medium">{{ contain }}</span>
+					</div>
+				</div>
+				<div *ngIf="package.notContains.length > 0" class="pb-2 border-t-2 border-t-zinc-400"></div>
+				<div *ngFor="let notContain of package.notContains" class="flex gap-3">
+					<div class="flex w-5 h-5 rounded-md bg-black">
+						<i class="fa-solid fa-minus m-auto text-white"></i>
+					</div>
+					<div class="flex">
+						<span class="my-auto font-medium">{{ notContain }}</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="mt-auto pt-12">
+			<div (click)="choosePackage(package.id)" class="btn btn-primary w-full">Zvolit balíček</div>
+		</div>
+	</div>
+</div>
