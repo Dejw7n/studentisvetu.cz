@@ -7,19 +7,14 @@ import { Component, OnInit } from "@angular/core";
 })
 export class InquireWebComponent implements OnInit {
 	stepNow: number = 0;
-	steps: any = [
-		{
-			name: "Vybrat plán",
-		},
-		{
-			name: "Detaily stránky",
-		},
-		{
-			name: "Odeslat poptávku",
-		},
-	];
 
 	constructor() {}
 
 	ngOnInit(): void {}
+
+	stepAction(data: any) {
+		if (data.action == "submit") {
+			this.stepNow = 1;
+		}
+	}
 }

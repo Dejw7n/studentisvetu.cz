@@ -1,4 +1,4 @@
-<div class="flex gap-14">
+<div id="inquireWebsite" class="block gap-14 lg:flex">
 	<div class="w-fit p-8 rounded-2xl bg-sky-100">
 		<div class="text-2xl font-bold self-center">
 			<span class="text-primary">STUDENTI</span>
@@ -12,25 +12,12 @@
 				<p class="!m-0">A vy se pak rozhodnete, zda si ho objednáte.</p>
 			</div>
 		</div>
-		<div class="mt-44">
+		<div class="hidden mt-44 lg:block">
 			<object type="image/svg+xml" data="assets/svg/browser-frame.svg" class="w-full"></object>
 		</div>
 	</div>
 	<div class="w-full">
-		<div class="grid grid-cols-3 py-5">
-			<div *ngFor="let step of steps; let i = index" class="flex gap-3">
-				<div [class]="stepNow == i ? 'bg-black' : 'bg-zinc-500'" class="grid w-8 h-8 rounded-full">
-					<div class="m-auto">
-						<span *ngIf="stepNow <= i" class="text-xl text-white font-semibold">{{ i + 1 }}</span>
-						<div *ngIf="stepNow > i" class="text-lg text-white">
-							<i class="fa-solid fa-check"></i>
-						</div>
-					</div>
-				</div>
-				<span [class]="step.active ? 'text-black' : 'text-zinc-500'" class="self-center font-bold">{{ step.name }}</span>
-			</div>
-		</div>
-		<home-inquireWeb-packages *ngIf="stepNow == 0"></home-inquireWeb-packages>
-		<home-inquireWeb-details *ngIf="stepNow == 1"></home-inquireWeb-details>
+		<home-inquireWeb-form *ngIf="stepNow == 0" (action)="stepAction($event)"></home-inquireWeb-form>
+		<home-inquireWeb-sent *ngIf="stepNow == 1" (action)="stepAction($event)"></home-inquireWeb-sent>
 	</div>
 </div>

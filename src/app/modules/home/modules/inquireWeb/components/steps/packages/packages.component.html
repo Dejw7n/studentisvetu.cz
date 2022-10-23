@@ -4,37 +4,39 @@
 		<p class="!m-0">Do 24h se Vám ozveme s hotovým návrhem na e-mail.</p>
 	</div>
 </div>
-<div class="flex gap-12 mt-8">
-	<div *ngFor="let items of [0, 1]" class="w-full max-w-[375px] p-8 rounded-2xl shadow-xl bg-sky-50">
-		<div class="flex gap-4">
-			<div class="w-8 h-8 rounded-sm bg-sky-500"></div>
-			<span class="text-xl font-bold">Prezenční web</span>
-		</div>
-		<div class="mt-5">
-			<span class="text-3xl font-bold">3000,- Kč</span>
-			<span class="text-zinc-600 font-semibold"> / navždy</span>
-		</div>
-		<div class="grid gap-1 mt-10">
-			<div *ngFor="let item of [0, 1, 2, 3, 4, 5]" class="flex gap-4">
-				<div class="flex w-5 h-5 rounded-md bg-black">
-					<i class="fa-solid fa-check m-auto text-white"></i>
+<div class="grid gap-12 mt-8 md:flex">
+	<div *ngFor="let package of packages" class="grid w-full max-w-[375px] p-8 rounded-2xl shadow-xl bg-sky-50">
+		<div>
+			<div class="flex gap-4">
+				<div class="w-8 h-8 rounded-sm bg-sky-500"></div>
+				<span class="text-xl font-bold">{{ package.name }}</span>
+			</div>
+			<div class="mt-5">
+				<span class="text-3xl font-bold">{{ package.price }},- Kč</span>
+				<span class="text-zinc-600 font-semibold"> / navždy</span>
+			</div>
+			<div class="grid gap-1 mt-10">
+				<div *ngFor="let contain of package.contains" class="flex gap-4">
+					<div class="flex w-5 h-5 rounded-md bg-black">
+						<i class="fa-solid fa-check m-auto text-white"></i>
+					</div>
+					<div class="flex">
+						<span class="my-auto font-medium">{{ contain }}</span>
+					</div>
 				</div>
-				<div class="flex">
-					<span class="my-auto font-medium">Doba realizace 3 dny</span>
+				<div *ngIf="package.notContains.length > 0" class="pb-2 border-t-2 border-t-zinc-400"></div>
+				<div *ngFor="let notContain of package.notContains" class="flex gap-3">
+					<div class="flex w-5 h-5 rounded-md bg-black">
+						<i class="fa-solid fa-minus m-auto text-white"></i>
+					</div>
+					<div class="flex">
+						<span class="my-auto font-medium">{{ notContain }}</span>
+					</div>
 				</div>
 			</div>
-			<div class="pb-2 border-t-2 border-t-zinc-400"></div>
-			<div *ngFor="let item of [0, 1]" class="flex gap-3">
-				<div class="flex w-5 h-5 rounded-md bg-black">
-					<i class="fa-solid fa-minus m-auto text-white"></i>
-				</div>
-				<div class="flex">
-					<span class="my-auto font-medium">Doba realizace 3 dny</span>
-				</div>
-			</div>
 		</div>
-		<div class="mt-12">
-			<div class="btn btn-primary w-full">Zvolit balíček</div>
+		<div class="mt-auto pt-12">
+			<div (click)="choosePackage(package.id)" class="btn btn-primary w-full">Zvolit balíček</div>
 		</div>
 	</div>
 </div>
