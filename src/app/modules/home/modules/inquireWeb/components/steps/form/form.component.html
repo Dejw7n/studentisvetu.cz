@@ -1,0 +1,35 @@
+<div class="mt-8">
+	<div class="prose">
+		<h2 class="!m-0">Napište nám</h2>
+		<p class="!m-0">...a my dáme vašim myšlenkám směr, originální tvář a funkčnost.</p>
+	</div>
+</div>
+<div class="mt-8">
+	<form [formGroup]="inquireForm" id="inquireWebForm">
+		<div class="w-full grid grid-cols-6 gap-6">
+			<div class="input-floating col-span-6">
+				<input formControlName="name" [(ngModel)]="inquireValues.name" type="text" name="name" id="name" placeholder=" " required />
+				<label for="name">Jméno a příjmení *</label>
+				<app-validate-input [input]="inquireForm.controls['name']" [inputValidators]="inquireValidators.name"></app-validate-input>
+			</div>
+			<div class="input-floating col-span-6 sm:col-span-3">
+				<input formControlName="email" type="email" name="email" id="email" placeholder=" " required />
+				<label for="email">E-mail *</label>
+				<app-validate-input [input]="inquireForm.controls['email']" [inputValidators]="inquireValidators.email"></app-validate-input>
+			</div>
+			<div class="input-floating col-span-6 sm:col-span-3">
+				<input formControlName="tell" type="text" name="tell" id="tell" placeholder=" " />
+				<label for="tell">Telefon</label>
+			</div>
+			<div class="input col-span-6">
+				<label for="message">Rozepište se, jak potřebujete</label>
+				<textarea formControlName="message" id="message" rows="4" placeholder="Leave a comment..."></textarea>
+				<app-validate-input [input]="inquireForm.controls['message']" [inputValidators]="inquireValidators.message"></app-validate-input>
+			</div>
+		</div>
+		<div class="grid gap-4 mt-8">
+			<p class="text-right">Odesláním souhlasíte se <a href="" class="font-semibold underline">zásadami ochrany osobních údajů</a>.</p>
+			<button (click)="submit()" type="submit" form="inquireWebForm" value="Submit" class="btn btn-black ml-auto">ODESLAT</button>
+		</div>
+	</form>
+</div>
