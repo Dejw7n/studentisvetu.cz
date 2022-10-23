@@ -1,5 +1,10 @@
-<div class="container pb-32">
-	<app-header></app-header>
+<div *ngIf="!withoutOverlay.includes(this.router.url)">
+	<div class="container pb-32">
+		<app-header></app-header>
+		<router-outlet></router-outlet>
+	</div>
+	<app-footer></app-footer>
+</div>
+<div *ngIf="this.router.url == '/admin'">
 	<router-outlet></router-outlet>
 </div>
-<app-footer></app-footer>
