@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { MobileSvgComponent } from './mobile-svg.component';
+import { PhoneSvgComponent } from './phone-svg.component';
 
-describe('MobileSvgComponent', () => {
-  let component: MobileSvgComponent;
-  let fixture: ComponentFixture<MobileSvgComponent>;
+describe('PhoneSvgComponent', () => {
+  let component: PhoneSvgComponent;
+  let fixture: ComponentFixture<PhoneSvgComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ MobileSvgComponent ]
+      declarations: [ PhoneSvgComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(MobileSvgComponent);
+    fixture = TestBed.createComponent(PhoneSvgComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

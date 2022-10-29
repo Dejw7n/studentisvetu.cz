@@ -1,6 +1,6 @@
 <div class="grid w-full pt-24">
-	<div class="block grid-flow-col mt-auto lg:grid">
-		<div class="my-auto">
+	<div class="block grid-flow-col mt-auto sm:grid">
+		<div class="w-auto my-auto sm:w-max">
 			<div class="grid gap-6 prose 2xl:prose-xl">
 				<h1 class="font-semibold !m-0">Vytvoříme <span class="text-primary font-bold">informační</span><br />stránky na míru</h1>
 				<p class="!m-0">Společně s vámi vytváříme web a ladíme detaily.</p>
@@ -10,13 +10,17 @@
 				<div class="btn btn-empty-black rounded-full">Zobrazit ceny</div>
 			</div>
 		</div>
-		<div class="hidden relative w-full lg:flex">
-			<div class="flex ml-auto">
-				<div class="w-[60%] -mr-24 mt-36 z-10">
-					<object type="image/svg+xml" data="assets/svg/phone.svg" class="w-full"></object>
+		<div class="hidden relative w-full sm:flex">
+			<div class="flex lg:ml-auto">
+				<div>
+					<div home-phone-svg class="hidden relative scale-[0.8] -mr-36 mt-2 z-10 md:block lg:hidden xl:block">
+						<div class="w-full h-full bg-primary"></div>
+					</div>
 				</div>
-				<div class="w-[300%]">
-					<object type="image/svg+xml" data="assets/svg/notebook.svg" class="w-full"></object>
+				<div>
+					<div home-notebook-svg class="hidden lg:block">
+						<div class="w-full h-full bg-primary"></div>
+					</div>
 				</div>
 			</div>
 		</div>
